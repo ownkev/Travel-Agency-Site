@@ -23,10 +23,15 @@
          </p>
          <br/>
         <form action="payment.html">
-            <label>Please select a service:</label>
             <br/>
-           
-            <input type="text" placeholder="Select Service"/>
+            <label for="service">Select a Service:</label>
+            <select id="service" name="service">
+            <option value="flight">Flight Booking</option>
+            <option value="hotel">Hotel Reservation</option>
+            <option value="car">Car Rental</option>
+            <option value="tour">Guided Tour</option>
+            <option value="insurance">Travel Insurance</option>
+            </select><br><br>
             <br/><br/>
             <label>First Name:</label>
             <br/>
