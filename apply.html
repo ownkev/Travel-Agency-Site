@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Application Page</title>
-        <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
-        <link rel="stylesheet" href="stylesheet/bootstrap.min.css"/>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Link to Bootstrap JavaScript -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <html lang="en">
+        <head>
+            <title>Application Page</title>
+            <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
+            <link rel="stylesheet" href="stylesheet/bootstrap.min.css"/>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <link rel="stylesheet" href="stylesheet/container.css"/>
+            <script src="stylesheet/bootstrap.min.css"></script>
             <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
                 body 
                 {
-                    background-image: url(images/travel_1.jpg);
+                    background-image: url(images/apply_bg.jpg);
                     background-repeat: no-repeat;
                     background-size: cover;
                     
@@ -24,13 +24,14 @@
                     text-align: center;
                 }
             </style>
-    </head>
-    <body>
-      <Head>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
+        </head>
+        <body>
+        <Head>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
             <a class="navbar-brand" href="#">HTA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -43,62 +44,12 @@
             </div>
           </div>
         </nav>
-    <style>
-        body 
-        {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container 
-        {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h2 
-        {
-            color: #005f73;
-        }
-        label 
-        {
-            display: block;
-            margin-bottom: 10px;
-        }
-        input[type="text"], input[type="number"], input[type="email"], select
-        {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            margin-bottom: 20px;
-        }
-        input[type="submit"] 
-        {
-            background-color: #009879;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover 
-        {
-            background-color: #007a6b;
-        }
-        footer 
-        {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+        <style src="stylesheet/container.css">
+        
+        </style>
+        </head>
+        <body>
+        <div class="container">
         <h2>APPLY FOR A SERVICE <img width="64" height="64" 
             src="https://img.icons8.com/cotton/64/clipboard-approve.png" 
             alt="clipboard-approve"/>
@@ -120,94 +71,174 @@
                     <option value="passport">Passport Services</option>
                 </select>
         
-            <!-- Popup container -->
-            <div class="popup" id="servicePopup">
-                <!-- Additional details about the selected service go here -->
-                <p>Choose a package here.</p>
+            
+                <div class="container" style="width:550px; height: 250px;;">
+                    <p>Choose a package here.</p>
                 
-                <!-- Flight options -->
-                <div id="serviceOptions">
-                    <!-- Flight options -->
-                    <div id="flightOptions" style="display: none;">
-                        <p>Choose your flight destination:</p>
-                        <label>
+                    <div id="serviceOptions">
+                
+                        <div id="flightOptions" style="display: none;">
+                            <p>Choose your flight destination:</p>
+                            <label>
                             <input type="radio" name="selectedService" value="USA Flight" data-price="500"> USA Flight ($500)
-                        </label>
-                        <label>
+                            </label>
+                            <label>
                             <input type="radio" name="selectedService" value="UK Flight" data-price="700"> UK Flight ($700)
-                        </label>
-                        <label>
+                            </label>
+                            <label>
                             <input type="radio" name="selectedService" value="Canada Flight" data-price="600"> Canada Flight ($600)
-                        </label>
-                    </div>
+                            </label>
+                        </div>
 
-                    <!-- Cruise options -->
-                    <div id="cruiseOptions" style="display: none;">
-                        <p>Choose your cruise destination:</p>
-                        <label>
+                        <div id="cruiseOptions" style="display: none;">
+                            <p>Choose your cruise destination:</p>
+                            <label>
                             <input type="radio" name="selectedService" value="USA Cruise" data-price="800"> USA Cruise ($800)
-                        </label>
-                        <label>
+                            </label>
+                            <label>
                             <input type="radio" name="selectedService" value="UK Cruise" data-price="900"> UK Cruise ($900)
-                        </label>
-                        <label>
+                            </label>
+                            <label>
                             <input type="radio" name="selectedService" value="Canada Cruise" data-price="850"> Canada Cruise ($850)
-                        </label>
-                    </div>
+                            </label>
+                        </div>
 
-                    <!-- Add more options (passport, visa, car rental, travel insurance) as needed -->
+                        <div id="hotelOptions" style="display: none;">
+                            <p>Choose your reservation preference:</p>
+                            <label>
+                            <input type="radio" name="selectedService" value="3 to 5 Star" data-price="800"> 3 to 5 Star ($800)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value=" 1- 2 star" data-price="900"> 1- 2 star ($900)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="Air BnB" data-price="850"> Air BnB ($850)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="Villas" data-price="850"> Villas ($850)
+                            </label>
+                        </div>
+
+                        <div id="carOptions" style="display: none;">
+                            <p>Choose your vehicle type preference:</p>
+                            <label>
+                            <input type="radio" name="selectedService" value=" Sedan" data-price="800"> Sedan ($800)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="Wagon" data-price="900"> Wagon ($900)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="PickUp" data-price="850"> PickUp ($850)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="Coup" data-price="850"> Coup ($850)
+                            </label>
+                        </div>
+                    </div>
                 </div>
+
+
+                <br><br><br>
+                <p>PERSONAL INFO <img width="26" height="26" src="https://img.icons8.com/metro/26/edit-user-male.png" alt="edit-user-male"/></p>
+                <label>First Name:</label>
+                <input required type="text" class="form-control" placeholder="First Name *">
+                <br>
+                <label>Last Name:</label>
+                <input required type="text" class="form-control" placeholder="Last Name *">
+                <br>
+                <label>Email Address:</label>
+                <input required type="email" class="form-control" placeholder="@">
+                <br>
+                <label>Phone Number:</label>
+                <input required type="number" class="form-control" placeholder="123-4567">
+                <br>
+                <input type="submit" class="btn btn-primary" value="Next">
+            </form>
             </div>
 
-
-            <br><br>
-            <label>First Name:</label>
-            <input required type="text" class="form-control" placeholder="First Name *">
-            <br><br>
-            <label>Last Name:</label>
-            <input required type="text" class="form-control" placeholder="Last Name *">
-            <br><br>
-            <label>Email Address:</label>
-            <input required type="email" class="form-control" placeholder="Email *">
-            <br><br>
-            <label>Phone Number:</label>
-            <input required type="number" class="form-control" placeholder="Phone Number *">
-            <br><br>
-            <input type="submit" class="btn btn-primary" value="Next">
-        </form>
-    </div>
-
-    <!-- jQuery script to show/hide the popup and update prices -->
-    <script>
-        function showPopup() {
-            const selectedService = $("#service").val();
-            if (selectedService === "flight") {
+            <script>
+                function showPopup() 
+                {
+                const selectedService = $("#service").val();
+                if (selectedService === "flight") {
                 $("#servicePopup").show();
                 $("#flightOptions").show();
                 $("#cruiseOptions").hide();
-            } 
-            else if (selectedService === "cruise") {
+                $("#hotelOptions").hide();
+                $("#carOptions").hide();
+                $("#viasOptions").hide();
+                $("#passportOptions").hide();
+                } 
+                else if (selectedService === "cruise") 
+                {
                 $("#servicePopup").show();
                 $("#cruiseOptions").show();
                 $("#flightOptions").hide();
-            } 
-            else if (selectedService === "cruise") {
+                $("#hotelOptions").hide();
+                $("#carOptions").hide();
+                $("#viasOptions").hide();
+                $("#passportOptions").hide();
+                } 
+                else if (selectedService === "hotel") 
+                {
                 $("#servicePopup").show();
-                $("#cruiseOptions").show();
+                $("#hotelOptions").show();
+                $("#cruiseOptions").hide();
                 $("#flightOptions").hide();
-            }
-            else {
-                $("#servicePopup").hide();
+                $("#carOptions").hide();
+                $("#viasOptions").hide();
+                $("#passportOptions").hide();
+                }
+                else if (selectedService === "car") 
+                {
+                $("#servicePopup").show();
+                $("#carOptions").show();
+                $("#hotelOptions").hide();
+                $("#cruiseOptions").hide();
                 $("#flightOptions").hide();
-            }
-        }
+                $("#viasOptions").hide();
+                $("#passportOptions").hide();
+                }
+                else if (selectedService === "visa") 
+                {
+                $("#servicePopup").show();
+                $("#visaOptions").show();
+                $("#hotelOptions").hide();
+                $("#cruiseOptions").hide();
+                $("#flightOptions").hide();
+                $("#carOptions").hide();
+                $("#passportOptions").hide();
+                }
+                else if (selectedService === "passport") {
+                $("#servicePopup").show();
+                $("#passportOptions").show();
+                $("#hotelOptions").hide();
+                $("#cruiseOptions").hide();
+                $("#flightOptions").hide();
+                $("#carOptions").hide();
+                $("#visaOptions").hide();
+                }   
+                else 
+                {
+                $("#servicePopup").show();
+                $("#hotelOptions").hide();
+                $("#cruiseOptions").hide();
+                $("#flightOptions").hide();
+                $("#carOptions").hide();
+                $("#visaOptions").hide();
+                $("#passportOptions").hide();
+                }
+                }
 
-        // Update price based on selected flight option
-        $("input[name='flightOption']").change(function() {
-            const selectedPrice = $(this).data("price");
-            // Assuming you have an input field for the total price
-            $("#totalPrice").val(selectedPrice);
-        });
-    </script>
-</body>
+                // Update price based on selected flight option
+                $("input[name='flightOption']").change(function() {
+                const selectedPrice = $(this).data("price");
+                // Assuming you have an input field for the total price
+                $("#totalPrice").val(selectedPrice);
+                });
+            </script>
+                <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
+                 <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
+                </footer>
+        </body>
 </html>
