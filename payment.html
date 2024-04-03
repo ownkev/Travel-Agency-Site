@@ -84,8 +84,13 @@
     </style>
         
         <div class="container">
-            <h1>Secure Payment</h1>
-            <form action="confirmation_page.html">
+            <h1>Secure Payment
+                <div class="icons">
+                    <img src="images/icons8-visa-48.png" alt="Visa">
+                    <img src="images/icons8-mastercard-48.png" alt="Mastercard">
+                </div>
+            </h1>
+            <form>
                 <label for="cardholder">Cardholder Name:</label>
                 <input type="text" id="cardholder" name="cardholder" required>
                 <label for="cardnumber">Card Number:</label>
@@ -96,7 +101,21 @@
                 <input type="number" id="cvv" name="cvv" required>
                 <input type="submit" value="Make Payment">
             </form>
+
         </div>
+        
+        <script>
+            const paymentForm = document.getElementById("paymentForm");
+            paymentForm.addEventListener("submit", processPayment);
+             
+    
+            function processPayment(event) {
+                event.preventDefault();
+                // Your payment processing logic goes here
+                alert(action="confirmation_page.html");
+                // Redirect to a thank you page or perform other actions
+            }
+        </script>
         <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
             <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
           </footer>

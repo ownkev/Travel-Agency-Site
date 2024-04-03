@@ -3,7 +3,10 @@
     <head>
         <title>Application Page</title>
         <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
-        <link rel="stylesheet" href="stylesheet/bootstrap.min.css"
+        <link rel="stylesheet" href="stylesheet/bootstrap.min.css"/>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Link to Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
             <style>
                 body 
@@ -40,7 +43,6 @@
             </div>
           </div>
         </nav>
-    <title>Online Application - Horizon Travel</title>
     <style>
         body 
         {
@@ -97,43 +99,115 @@
 </head>
 <body>
     <div class="container">
-        <h2 style="align-items: center;">APPLY FOR A SERVICE</h2>
-
+        <h2>APPLY FOR A SERVICE <img width="64" height="64" 
+            src="https://img.icons8.com/cotton/64/clipboard-approve.png" 
+            alt="clipboard-approve"/>
+        </h2>
         <p>  Select the service you require below. Enter your personal
              information in the provided fields and once completed, 
              click next. You will then be taken to the payment page 
              to complete your order.
         </p>
-        <form action="payment.html">
-            <label for="services">Select a Service:</label>
-            <select id="service" name="service">
-                <option value="Select one"></option>
-                <option value="flight">Flight Booking</option>
-                <option value="cruise">Cruise Booking</option>
-                <option value="cruise">Hotel Reservation</option>
-                <option value="car">Car Rental</option>
-                <option value="tour">Guided Tour</option>
-                <option value="insurance">Travel Insurance</option>
-            </select>
+            <form action="payment.html">
+                <label for="service">Select a Service:</label>
+                <select id="service" name="service" onchange="showPopup()">
+                    <option value="select">*</option>
+                    <option value="flight">Flight Booking</option>
+                    <option value="cruise">Cruise Booking</option>
+                    <option value="hotel">Hotel Reservation</option>
+                    <option value="car">Car Rental</option>
+                    <option value="visa">Visa Services</option>
+                    <option value="passport">Passport Services</option>
+                </select>
+        
+            <!-- Popup container -->
+            <div class="popup" id="servicePopup">
+                <!-- Additional details about the selected service go here -->
+                <p>Choose a package here.</p>
+                
+                <!-- Flight options -->
+                <div id="serviceOptions">
+                    <!-- Flight options -->
+                    <div id="flightOptions" style="display: none;">
+                        <p>Choose your flight destination:</p>
+                        <label>
+                            <input type="radio" name="selectedService" value="USA Flight" data-price="500"> USA Flight ($500)
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedService" value="UK Flight" data-price="700"> UK Flight ($700)
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedService" value="Canada Flight" data-price="600"> Canada Flight ($600)
+                        </label>
+                    </div>
+
+                    <!-- Cruise options -->
+                    <div id="cruiseOptions" style="display: none;">
+                        <p>Choose your cruise destination:</p>
+                        <label>
+                            <input type="radio" name="selectedService" value="USA Cruise" data-price="800"> USA Cruise ($800)
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedService" value="UK Cruise" data-price="900"> UK Cruise ($900)
+                        </label>
+                        <label>
+                            <input type="radio" name="selectedService" value="Canada Cruise" data-price="850"> Canada Cruise ($850)
+                        </label>
+                    </div>
+
+                    <!-- Add more options (passport, visa, car rental, travel insurance) as needed -->
+                </div>
+            </div>
+
+
             <br><br>
             <label>First Name:</label>
-            <input required type="text" placeholder="First Name *">
+            <input required type="text" class="form-control" placeholder="First Name *">
             <br><br>
             <label>Last Name:</label>
-            <input required type="text" placeholder="Last Name *">
+            <input required type="text" class="form-control" placeholder="Last Name *">
             <br><br>
             <label>Email Address:</label>
-            <input required type="email" placeholder="Email *">
+            <input required type="email" class="form-control" placeholder="Email *">
             <br><br>
             <label>Phone Number:</label>
-            <input required type="number" placeholder="Phone Number *">
+            <input required type="number" class="form-control" placeholder="Phone Number *">
             <br><br>
-            <input type="submit" value="Next">
+            <input type="submit" class="btn btn-primary" value="Next">
         </form>
     </div>
 
-    <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
-        <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
-      </footer>
+    <!-- jQuery script to show/hide the popup and update prices -->
+    <script>
+        function showPopup() {
+            const selectedService = $("#service").val();
+            if (selectedService === "flight") {
+                $("#servicePopup").show();
+                $("#flightOptions").show();
+                $("#cruiseOptions").hide();
+            } 
+            else if (selectedService === "cruise") {
+                $("#servicePopup").show();
+                $("#cruiseOptions").show();
+                $("#flightOptions").hide();
+            } 
+            else if (selectedService === "cruise") {
+                $("#servicePopup").show();
+                $("#cruiseOptions").show();
+                $("#flightOptions").hide();
+            }
+            else {
+                $("#servicePopup").hide();
+                $("#flightOptions").hide();
+            }
+        }
+
+        // Update price based on selected flight option
+        $("input[name='flightOption']").change(function() {
+            const selectedPrice = $(this).data("price");
+            // Assuming you have an input field for the total price
+            $("#totalPrice").val(selectedPrice);
+        });
+    </script>
 </body>
 </html>
