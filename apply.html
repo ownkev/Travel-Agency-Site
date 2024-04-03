@@ -4,12 +4,29 @@
         <title>Application Page</title>
         <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
         <link rel="stylesheet" href="stylesheet/bootstrap.min.css"
+            <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                body 
+                {
+                    background-image: url(images/travel_1.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    
+                    font-family: Arial, sans-serif;
+                    color: #100000;
+                }
+                
+                h1 
+                {
+                    text-align: center;
+                }
+            </style>
     </head>
     <body>
       <Head>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Horizon</a>
+            <a class="navbar-brand" href="#">HTA</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,13 +42,15 @@
         </nav>
     <title>Online Application - Horizon Travel</title>
     <style>
-        body {
+        body 
+        {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
             margin: 0;
             padding: 0;
         }
-        .container {
+        .container 
+        {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
@@ -39,21 +58,25 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h2 {
+        h2 
+        {
             color: #005f73;
         }
-        label {
+        label 
+        {
             display: block;
             margin-bottom: 10px;
         }
-        input[type="text"], input[type="number"], input[type="email"], select {
+        input[type="text"], input[type="number"], input[type="email"], select
+        {
             width: 100%;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
             margin-bottom: 20px;
         }
-        input[type="submit"] {
+        input[type="submit"] 
+        {
             background-color: #009879;
             color: #ffffff;
             border: none;
@@ -61,10 +84,12 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        input[type="submit"]:hover {
+        input[type="submit"]:hover 
+        {
             background-color: #007a6b;
         }
-        footer {
+        footer 
+        {
             text-align: center;
             margin-top: 20px;
         }
@@ -72,7 +97,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Apply For A Service</h2>
+        <h2 style="align-items: center;">APPLY FOR A SERVICE</h2>
 
         <p>  Select the service you require below. Enter your personal
              information in the provided fields and once completed, 
@@ -80,10 +105,12 @@
              to complete your order.
         </p>
         <form action="payment.html">
-            <label for="service">Select a Service:</label>
+            <label for="services">Select a Service:</label>
             <select id="service" name="service">
+                <option value="Select one"></option>
                 <option value="flight">Flight Booking</option>
-                <option value="hotel">Hotel Reservation</option>
+                <option value="cruise">Cruise Booking</option>
+                <option value="cruise">Hotel Reservation</option>
                 <option value="car">Car Rental</option>
                 <option value="tour">Guided Tour</option>
                 <option value="insurance">Travel Insurance</option>
@@ -93,20 +120,20 @@
             <input required type="text" placeholder="First Name *">
             <br><br>
             <label>Last Name:</label>
-            <input type="text" placeholder="Last Name *">
+            <input required type="text" placeholder="Last Name *">
             <br><br>
             <label>Email Address:</label>
-            <input required type="email" placeholder="Email">
+            <input required type="email" placeholder="Email *">
             <br><br>
             <label>Phone Number:</label>
-            <input required type="number" placeholder="Phone Number">
+            <input required type="number" placeholder="Phone Number *">
             <br><br>
             <input type="submit" value="Next">
         </form>
     </div>
 
-    <footer>
-        <p>© 2024 Horizon Travel Services. All rights reserved.</p>
-    </footer>
+    <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
+        <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
+      </footer>
 </body>
 </html>
