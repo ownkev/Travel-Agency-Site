@@ -1,44 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Online Application</title>
+        <title>Payment Page</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
+        <link rel="stylesheet" href="stylesheet/bootstrap.min.css"
+        
     </head>
     <body>
-        <a href="index.html">Home</a>
-        <a href="apply.html">Online Application</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact_us.html">Contact Us</a>
+      <Head>
+        <style>
+            body 
+            {
+                background-image: url(images/pay_bg.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+                font-family: Arial, sans-serif;
+                color: #100000;
+            }
+            
+            h1 
+            {
+                text-align: center;
+            }
+        </style>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">Horizon</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="apply.html">Online Application</a>
+                <a class="nav-link" href="about_us.html">About Us</a>
+                <a class="nav-link" href="contact_us.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </Head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #005f73;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            background-color: #009879;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #007a6b;
+        }
+    </style>
         
-        <p>Horizon Travel Agency</p>
-    </body>
-    <section id="payment">
-        <h2>Payment</h2>
-        <p>
-            On this page you will enter your card information 
-        </p>
-        <form action="confirmation_page.html">
-            <label>Card Number:</label>
-            <br/>
-            <input required type="number" placeholder="Enter Card Number"/>
-            <br/>
-            <label>Name on card:</label>
-            <br/>
-            <input type="text" placeholder="Ennter full name"/>
-            <br/>
-            <label>Valid Thru:</label>
-            <br/>
-            <input required type="number" placeholder="Enter Expiry Date"/>
-            <br/>
-            <label>CVC</label>
-            <br/>
-            <input required type="number [16]" placeholder="Enter CVC"/>
-            <br/><br/>
-            <input type="submit" value="Next"/>
-        </form>
+        <div class="container">
+            <h1>Secure Payment
+                <div class="icons">
+                    <img src="images/icons8-visa-48.png" alt="Visa">
+                    <img src="images/icons8-mastercard-48.png" alt="Mastercard">
+                </div>
+            </h1>
+            <form>
+                <label for="cardholder">Cardholder Name:</label>
+                <input type="text" id="cardholder" name="cardholder" required>
+                <label for="cardnumber">Card Number:</label>
+                <input type="text" id="cardnumber" name="cardnumber" required>
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                <label for="cvv">CVV:</label>
+                <input type="number" id="cvv" name="cvv" required>
+                <input type="submit" value="Make Payment">
+            </form>
 
-    <footer>
-        <p>&copy; 2024 Horizon Travel Services. All rights reserved.</p>
-    </footer>
+        </div>
+        
+        <script>
+            const paymentForm = document.getElementById("paymentForm");
+            paymentForm.addEventListener("submit", processPayment);
+             
+    
+            function processPayment(event) {
+                event.preventDefault();
+                // Your payment processing logic goes here
+                alert(action="confirmation_page.html");
+                // Redirect to a thank you page or perform other actions
+            }
+        </script>
+        <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
+            <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
+          </footer>
 </body>
 
 </html>
