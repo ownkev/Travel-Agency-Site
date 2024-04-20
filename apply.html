@@ -8,6 +8,7 @@
             <link rel="stylesheet" href="stylesheet/container.css"/>
             <script src="stylesheet/bootstrap.min.css"></script>
             <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+            <style src="stylesheet/container.css"> </style>
             <style>
                 body 
                 {
@@ -24,40 +25,38 @@
                     text-align: center;
                 }
             </style>
+              <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/Horizon_Logo.jpeg" alt="Bootstrap" width="96" height="80">
+                      </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="apply.html">Online Application</a>
+                    <a class="nav-link" href="about_us.html">About Us</a>
+                    <a class="nav-link" href="contact_us.html">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
         </head>
         <body>
-        <Head>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            <a class="navbar-brand" href="#">HTA</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <a class="nav-link" href="index.html">Home</a>
-                <a class="nav-link" href="apply.html">Online Application</a>
-                <a class="nav-link" href="about_us.html">About Us</a>
-                <a class="nav-link" href="contact_us.html">Contact Us</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <style src="stylesheet/container.css">
         
-        </style>
-        </head>
         <body>
         <div class="container">
         <h2>APPLY FOR A SERVICE <img width="64" height="64" 
             src="https://img.icons8.com/cotton/64/clipboard-approve.png" 
             alt="clipboard-approve"/>
         </h2>
-        <p>  Select the service you require below. Enter your personal
-             information in the provided fields and once completed, 
-             click next. You will then be taken to the payment page 
-             to complete your order.
+        <p> Select the service you require below. 
+            Fill in your personal details in the provided fields,
+            and once done, click “Next.” 
+            You will then be directed to the payment page to finalize your order.
         </p>
             <form action="payment.html">
                 <label for="service">Select a Service:</label>
@@ -80,58 +79,71 @@
                         <div id="flightOptions" style="display: none;">
                             <p>Choose your flight destination:</p>
                             <label>
-                            <input type="radio" name="selectedService" value="USA Flight" data-price="500"> USA Flight ($500)
+                            <input type="radio" name="selectedService" value="USA Flights" data-price="150"> USA Flights ($150)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="UK Flight" data-price="700"> UK Flight ($700)
+                            <input type="radio" name="selectedService" value="UK Flights" data-price="190"> UK Flights ($190)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="Canada Flight" data-price="600"> Canada Flight ($600)
+                            <input type="radio" name="selectedService" value="Canada Flights" data-price="150"> Canada Flights ($150)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="Other Flights" data-price="200"> Other Flights ($200)
                             </label>
                         </div>
 
                         <div id="cruiseOptions" style="display: none;">
                             <p>Choose your cruise destination:</p>
                             <label>
-                            <input type="radio" name="selectedService" value="USA Cruise" data-price="800"> USA Cruise ($800)
+                            <input type="radio" name="selectedService" value="USA Cruise" data-price="200"> USA Cruise ($200)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="UK Cruise" data-price="900"> UK Cruise ($900)
+                            <input type="radio" name="selectedService" value="Caribbean Cruise" data-price="150"> Caribbean Cruise ($150)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="Canada Cruise" data-price="850"> Canada Cruise ($850)
+                            <input type="radio" name="selectedService" value="Canada Cruise" data-price="300"> International Cruise ($300)
                             </label>
                         </div>
 
                         <div id="hotelOptions" style="display: none;">
                             <p>Choose your reservation preference:</p>
                             <label>
-                            <input type="radio" name="selectedService" value="3 to 5 Star" data-price="800"> 3 to 5 Star ($800)
+                            <input type="radio" name="selectedService" value="3 to 5 Star" data-price="100"> 3 to 5 Star ($100)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value=" 1- 2 star" data-price="900"> 1- 2 star ($900)
+                            <input type="radio" name="selectedService" value=" 1- 2 star" data-price="80"> 1- 2 star ($80)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="Air BnB" data-price="850"> Air BnB ($850)
+                            <input type="radio" name="selectedService" value="Air BnB" data-price="60"> Air BnB ($60)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="Villas" data-price="850"> Villas ($850)
+                            <input type="radio" name="selectedService" value="Villas" data-price="50"> Villas ($50)
                             </label>
                         </div>
 
                         <div id="carOptions" style="display: none;">
                             <p>Choose your vehicle type preference:</p>
                             <label>
-                            <input type="radio" name="selectedService" value=" Sedan" data-price="800"> Sedan ($800)
+                            <input type="radio" name="selectedService" value=" Sedan" data-price="800"> Sedan ($60)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="Wagon" data-price="900"> Wagon ($900)
+                            <input type="radio" name="selectedService" value="Wagon" data-price="900"> Wagon ($60)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="PickUp" data-price="850"> PickUp ($850)
+                            <input type="radio" name="selectedService" value="PickUp" data-price="850"> PickUp ($90)
                             </label>
                             <label>
-                            <input type="radio" name="selectedService" value="Coup" data-price="850"> Coup ($850)
+                            <input type="radio" name="selectedService" value="Coup" data-price="850"> Coup ($80)
+                            </label>
+                        </div>
+
+                        <div id="passportOptions" style="display: none;">
+                            <p>Choose your Passport service:</p>
+                            <label>
+                            <input type="radio" name="selectedService" value=" New Appilcation" data-price="800"> New Application ($40)
+                            </label>
+                            <label>
+                            <input type="radio" name="selectedService" value="renewal" data-price="900"> Renewal ($35)
                             </label>
                         </div>
                     </div>
@@ -141,16 +153,16 @@
                 <br><br><br>
                 <p>PERSONAL INFO <img width="26" height="26" src="https://img.icons8.com/metro/26/edit-user-male.png" alt="edit-user-male"/></p>
                 <label>First Name:</label>
-                <input required type="text" class="form-control" placeholder="First Name *">
+                <input required type="text" class="form-control" placeholder="First Name*">
                 <br>
                 <label>Last Name:</label>
-                <input required type="text" class="form-control" placeholder="Last Name *">
+                <input required type="text" class="form-control" placeholder="Last Name*">
                 <br>
                 <label>Email Address:</label>
                 <input required type="email" class="form-control" placeholder="@">
                 <br>
                 <label>Phone Number:</label>
-                <input required type="number" class="form-control" placeholder="123-4567">
+                <input required type="number" class="form-control" placeholder="(876)123-4567">
                 <br>
                 <input type="submit" class="btn btn-primary" value="Next">
             </form>
@@ -230,10 +242,8 @@
                 }
                 }
 
-                // Update price based on selected flight option
                 $("input[name='flightOption']").change(function() {
                 const selectedPrice = $(this).data("price");
-                // Assuming you have an input field for the total price
                 $("#totalPrice").val(selectedPrice);
                 });
             </script>
