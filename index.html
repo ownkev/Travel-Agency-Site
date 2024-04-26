@@ -6,7 +6,6 @@
             <link rel="stylesheet" href="stylesheet/bootstrap.min.css"/>
             <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
             <link rel="stylesheet" href="stylesheet/container.css"/>
-        <!-- Link to Bootstrap JavaScript -->
         <script src="stylesheet/bootstrap.min.css"></script>
                 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
                 <style>
@@ -25,32 +24,45 @@
                         text-align: center;
                     }
                 </style>
+                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="images/Horizon_Logo.jpeg" alt="Bootstrap" width="96" height="80">
+                          </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="apply.html">Online Application</a>
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
         </head>
     
     <body>
-        <a href="index.html">Home</a>
-        <a href="apply.html">Online Application</a>
-        <a href="about_us.html">About Us</a>
-        <a href="contact_us.html">Contact Us</a>
-        
-        <p>Horizon Travel Agency</p>
-        <p>
-            Welcome to Horizon Travel Agency! 🌍✈️
-            <br>
-
-<h4>Embark on unforgettable journeys with us as we explore the world together. Whether you’re seeking exotic destinations, cultural experiences, or simply a relaxing getaway, our team of passionate travel experts is here to curate personalized itineraries just for you.
-
-Discover hidden gems, savor local cuisine, and create memories that will last a lifetime. From pristine beaches to bustling cities, let us guide you toward your next adventure. 🌴🗺️
-
-Get ready to set sail, take flight, and explore the horizon with Horizon Travel Agency. Bon voyage! 🌟🌏</p>
-
-
-
-
-
-        </p>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/travel_7.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/travel_6.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="images/travel_5.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
     </body>
     <footer>
-        <p>&copy; 2024 Horizon Travel Services. All rights reserved.</p>
+        <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
+                 <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
+                </footer>
     </footer>
 </html>
