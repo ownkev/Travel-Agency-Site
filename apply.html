@@ -168,7 +168,7 @@
                     </div>
                 </div>
 
-
+            
                 <br><br><br>
                 <p>PERSONAL INFO <img width="26" height="26" src="https://img.icons8.com/metro/26/edit-user-male.png" alt="edit-user-male"/></p>
                 <label>First Name:</label>
@@ -183,11 +183,16 @@
                 <label>Phone Number:</label>
                 <input required type="number" class="form-control" placeholder="(876)123-4567">
                 <br>
-                <input type="submit" class="btn btn-primary" value="Next">
+                <button onclick="showConfirmation()"> Next</button>
             </form>
+
             </div>
 
             <script>
+                 function showConfirmation() {
+                    var popup = document.getElementById("confirmationPopup");
+                    popup.style.display = "block";
+                 }
                 function showPopup() 
                 {
                 const selectedService = $("#service").val();
