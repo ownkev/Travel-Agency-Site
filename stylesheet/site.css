@@ -126,3 +126,6 @@ button {
 button:hover {
     background-color: #007a6b;
 }
+.nav-link:hover{
+    background-color: #009879
+}

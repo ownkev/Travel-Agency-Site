@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
             <link rel="stylesheet" href="stylesheet/bootstrap.min.css"/>
             <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="scripts/confirmation.popup.js"></script>
             <link rel="stylesheet" href="stylesheet/container.css"/>
             <script src="stylesheet/bootstrap.min.css"></script>
             <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,12 +28,12 @@
                 </div>
               </div>
             </nav>
-    </head>
-    <body>
+
         <a style="color: color-mix(in hsl longer hue, color-mix percentage, color percentage);" href="index.html">Home</a>
         <a href="apply.html">Online Application</a>
         <a href="about_us.html">About Us</a>
         <a href="contact_us.html">Contact Us</a>
+<<<<<<< Updated upstream
     </body>
     <style>
       .Container {
@@ -101,52 +102,51 @@
              <div class="Container">
                  <div  class="close" onclick="ClosePopup()">X</div>
                   <img src="Images/Tick.jpeg" alt="Right" width="100" height="100">
+=======
+   </head>
+
+   <body>
+   
+       
+       </div class= "container">
+           <div class="popup-box">
+               <h2>Confirmation</h2>
+               <p>Are you sure you want to proceed?</p>
+               <button onclick="confirmAction()">Yes</button>
+               <button onclick="closePopup2()">No</button>
+           </div>
+       </div>
+   
+        <div class="popup-container" id="confirmationPopup2">
+            <div class="popup-box">
+                <div>
+                    <div class="Container2">
+                    <div  class="close" onclick="ClosePopup()">X</div>
+                    <img src="Images/Tick.jpeg" alt="Right" width="100" height="100">
+                </div>
+            </div>
+                <h2>Confirmed!</h2>
+            </div>
+        </div>
+   
+   
+        <div class="popup-container" id="confirmationPopup3">
+            <div class="popup-box">
+              <div>
+                 <div class="Container2">
+                    <div  class="close" onclick="ClosePopup()">X</div>
+                    <img src="Images/Wrong.jpeg" alt="Wrong" width="100" height="100">
+               </div>
+            </div>
+                <h2>Not Confirmed!</h2>
+>>>>>>> Stashed changes
              </div>
-         </div>
-         <h2>Confirmed!</h2>
-     </div>
- </div>
- 
- 
- <div class="popup-container" id="confirmationPopup3">
-     <div class="popup-box">
-         <div>
-             <div class="Container">
-                  <img src="Images/Wrong.jpeg" alt="Wrong" width="100" height="100">
-             </div>
-         </div>
-         <h2>Not Confirmed!</h2>
-     </div>
- </div>
- 
- 
- <script>
-     function showConfirmation() {
-         var popup = document.getElementById("confirmationPopup"); popup.style.display = "block";
-     }
- 
-     function closePopup() {
-         var popup = document.getElementById("confirmationPopup"); popup.style.display = "none";
-     }
- 
-     function confirmAction() {
-         var popup = document.getElementById("confirmationPopup2"); popup.style.display = "block";
-         closePopup();
-     }
- 
-     function closePopup2() {
-         var popup = document.getElementById("confirmationPopup3"); popup.style.display = "block";
-         closePopup();
-     }
- 
-     function ClosePopup() {
-         document.getElementById("confirmationPopup2").style.display = "none";
-     }        
-     
- </script>
- 
+        </div>
+
+</body>   
            <footer>
             <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
                 <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
                </footer>
         </footer>
+</html>
