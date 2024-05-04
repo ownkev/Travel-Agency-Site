@@ -16,9 +16,11 @@ function closePopup2() {
     closePopup();
 }
 
-function ClosePopup() {
+// Exist Confirmation Popups Froms - START
+function ClosePopup3() {
     document.getElementById("confirmationPopup2").style.display = "none";
-}       
-function ClosePopup() {
+}
+function ClosePopup4() {
     document.getElementById("confirmationPopup3").style.display = "none";
 }
+// Exist Confirmation Popups Froms - END
