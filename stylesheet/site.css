@@ -115,3 +115,14 @@ body{
         font-stretch: 16px;
     }
 }
+button {
+    background-color: #009879;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #007a6b;
+}

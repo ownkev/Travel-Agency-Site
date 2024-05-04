@@ -3,7 +3,8 @@
     <head>
         <title>Payment Page</title>
         <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
-        <link rel="stylesheet" href="stylesheet/bootstrap.min.css"   
+        <link rel="stylesheet" href="stylesheet/bootstrap.min.css"
+        
     </head>
     <body>
       <Head>
@@ -80,6 +81,18 @@
         input[type="submit"]:hover {
             background-color: #007a6b;
         }
+    
+        button {
+            background-color: #009879;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #007a6b;
+        }
     </style>
         
         <div class="container">
@@ -98,9 +111,94 @@
                 <input type="number" id="expiry" name="expiry" placeholder="MM/YY" required>
                 <label for="cvv">CVV:</label>
                 <input type="number" id="cvv" name="cvv" required>
-                <input type="submit" value="Make Payment">
-                <button>clear</button>
+                <button onclick="confirmAction()">Make Payment</button>
+                <button onclick="closePopup2()">Clear</button>
+                
             </form>
+            <style>
+                .Container {
+                   display: flex; /* Use flexbox to center */
+                   justify-content: center; /* Horizontally center content */
+                   align-items: center;
+                   }
+               .popup-container {
+                   display: none;
+                   position: fixed;
+                   top: 0;
+                   left: 0;
+                   width: 100%;
+                   height: 100%;
+                   background-color: rgba(253, 251, 251, 0.5);
+                   z-index: 9999;
+               }
+               
+               .popup-box {
+                   position: fixed;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%, -50%);
+                   background-color: #f3f1f1;
+                   padding: 20px;
+                   border-radius: 10px;
+                   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+               }
+               .popup-box2 {
+                   <img src="Images/Tick.jpeg" alt="Tick"/>
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%, -50%);
+                   background-color: #eb1616;
+                   padding: 20px;
+                   border-radius: 5px;
+                   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+               }
+           </style>
+           </head>
+           <body>
+           
+           <div class="popup-container" id="confirmationPopup2">
+               <div class="popup-box">
+                   <div>
+                       <div class="Container">
+                            <img src="Images/Tick.jpeg" alt="Right" width="100" height="100">
+                       </div>
+                   </div>
+                   <h2>Confirmed!</h2>
+               </div>
+           </div>
+           
+           <div class="popup-container" id="confirmationPopup3">
+               <div class="popup-box">
+                   <div>
+                       <div class="Container">
+                            <img src="Images/Wrong.jpeg" alt="Wrong" width="100" height="100">
+                       </div>
+                   </div>
+                   <h2>Not Confirmed!</h2>
+               </div>
+           </div>
+           
+           <script>
+          
+               function closePopup() {
+                   var popup = document.getElementById("confirmationPopup");
+                   popup.style.display = "none";
+               }
+           
+               function confirmAction() {
+                   var popup = document.getElementById("confirmationPopup2");
+                   popup.style.display = "block";
+                   closePopup();
+               }
+           
+               function closePopup2() {
+                   var popup = document.getElementById("confirmationPopup3");
+                   popup.style.display = "block";
+                   closePopup();
+               }
+           </script>
+
         </div>
         <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
             <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Agency. All rights reserved.</p>
