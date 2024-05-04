@@ -88,9 +88,6 @@ body{
     color: grey;
 }
 
-
-
-
 @media  and (max-width: 768px){
     .heading h1{
         font-size: 36px;
@@ -129,3 +126,37 @@ button:hover {
 .nav-link:hover{
     background-color: #009879
 }
+.column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+input[type="text"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type="submit"] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+@media screen and (max-width: 600px) {
+    .column, input[type="submit"] {
+        width: 100%;
+        margin-top: 0;
+    }

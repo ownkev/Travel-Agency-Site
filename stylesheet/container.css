@@ -76,7 +76,6 @@ footer
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .popup-box2 {
-    <img src="Images/Tick.jpeg" alt="Tick"/>
     position: absolute;
     top: 50%;
     left: 50%;
