@@ -61,7 +61,17 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
+<<<<<<< HEAD
    
+=======
+}
+
+.image-container img {
+    width: 16%; 
+    height: auto;
+}
+
+>>>>>>> c824f54a0e5e7c4d50c39fd90618cdd3478bd281
 <<<<<<< HEAD
 .image-container img {
     width: 16%; 
