@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
         <head>
-            <title>HOME</title>
+            <title>Application Page</title>
             <link rel="stylesheet" type="text/css" href="stylesheet/site.css"/>
             <link rel="stylesheet" href="stylesheet/bootstrap.min.css"/>
             <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -51,17 +51,161 @@
               <div class="carousel-item active">
                 <img src="images/travel_7.png" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item">
-                <img src="images/travel_6.jpg" class="d-block w-100" alt="...">
+              <div class="splide__slide">
+                <div class="testimonial">
+                  <img src="./images/testimonial5.jpg" alt="" />
+                  <p>
+                    "Our family vacation organized by Horizon Travel was nothing
+                    short of fantastic. From accommodations to activities,
+                    everything was perfectly curated to suit our interests and
+                    preferences!" 
+				-The Greenword Family"
+                  </p>
+                </div>
               </div>
-              <div class="carousel-item">
-                <img src="images/travel_5.jpg" class="d-block w-100" alt="...">
+              <div class="splide__slide">
+                <div class="testimonial">
+                  <img src="./images/testimonial6.jpg" alt="" />
+                  <p>
+                    "Horizon Travel turned my bucket list destinations into a
+                    reality! Their team worked tirelessly to accommodate my
+                    requests and ensure that every aspect of my journey was
+                    flawless.I'm grateful for their expertise and professionalism!"
+			-Caramelita Rowe"
+                  </p>
+                </div>
               </div>
             </div>
           </div>
     </body>
     <footer>
-        <class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
-        <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
+        <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
+                 <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
+                </footer>
     </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#servicesSlider", {
+          perPage: 3,
+          gap: "2.5rem",
+          padding: "2.4rem",
+          snap: true,
+          perMove: 1,
+          type: "loop",
+          drag: "free",
+          pagination: false,
+          breakpoints: {
+            1000: {
+              padding: "1.5rem",
+              perPage: 2,
+              gap: "1.5rem",
+              height: "250px",
+            },
+            800: {
+              padding: ".5rem",
+              perPage: 2,
+              gap: ".7rem",
+              height: "250px",
+            },
+            640: {
+              perPage: 1,
+              gap: ".7rem",
+              height: "250px",
+            },
+            480: {
+              gap: "7.5rem",
+              padding: "1rem",
+              perPage: 1,
+              height: "250px",
+            },
+          },
+        }).mount();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#packagesSlider", {
+          perPage: 3,
+          gap: "1.5rem",
+          padding: "1.4rem",
+          snap: true,
+          perMove: 1,
+          type: "loop",
+          drag: "free",
+          pagination: false,
+          breakpoints: {
+            1000: {
+              padding: "1.5rem",
+              perPage: 2,
+              gap: "1.5rem",
+              height: "250px",
+            },
+            800: {
+              padding: ".5rem",
+              perPage: 2,
+              gap: ".7rem",
+              height: "300px",
+            },
+            640: {
+              perPage: 2,
+              gap: ".7rem",
+              height: "250px",
+            },
+            480: {
+              gap: "7.5rem",
+              padding: "1rem",
+              perPage: 1,
+              height: "20rem",
+            },
+          },
+        }).mount();
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#testimonialSlider", {
+          perPage: 2,
+          gap: "2.5rem",
+          padding: "2.4rem",
+          snap: true,
+          perMove: 1,
+          type: "loop",
+          drag: "free",
+          pagination: true,
+          arrows: false,
+          breakpoints: {
+            640: {
+              perPage: 1,
+              gap: ".7rem",
+              height: "5rem",
+              padding: "0rem",
+            },
+            550: {
+              height: "22rem",
+            },
+            480: {
+              gap: "0rem",
+              padding: "0rem",
+              perPage: 1,
+              height: "22rem",
+            },
+          },
+        }).mount();
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide("#splideBanner", {
+          type: "loop",
+          autoplay: true,
+          drag: "free",
+          snap: true,
+          perPage: 1,
+          perMove: 1,
+          pagination: true,
+          arrows: false,
+        }).mount();
+      });
+    </script>
+
+  </body>
 </html>
