@@ -1,0 +1,21 @@
+.image-banner {
+    position: relative; /* Key for positioning the text */
+    display: inline-block;
+    width: 100%; /* Adjust width as needed */
+  }
+  
+  .image-banner img {
+    width: 100%; 
+    height: auto; 
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the text */
+    color: white; /* Make the text visible */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);  /* Slightly transparent background */
+    padding: 20px; 
+  }

@@ -1,15 +1,6 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'roboto', sans-serif;
-}
 
-body{
-    background-color: white;
-}
 
-.heading{
+.heading, .about-heading{
     width: 90%;
     display: flex;
     justify-content: center;
@@ -19,24 +10,24 @@ body{
     margin: 20px auto;
 }
 
-.heading h1{
+.heading h1, .about-heading h2{
     font-size: 50px;
     color: black;
     margin-bottom: 25px;
     position: relative;
 }
 
-.heading h1::after{
+.heading h1::after, .about-heading h2::after{
     content:"";
     position: absolute;
-    width: 100%;
+    width: 50%;
     height: 4px;
     display: block;
     margin: 0 auto;
     background-color: brown;
 }
 
-.heading p{
+.heading p, .about-heading p{
     font-size: 18px;
     color: #605e5e;
     margin-bottom: 35px;
@@ -48,33 +39,45 @@ body{
        padding: 10px 20px;
 }
 
-.about{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.about-image img{
+.about-image img{ X
     flex: 1;
     margin-right: 40px;
     overflow: hidden;
 }
 
-.about-image img{
-    max-width: 100;
+.image-container img{
+    width: 40%;
     height: auto;
     display: block;
     transition: 0.5s ease;
 }
 
-.about-image:hover img{
+.image-container:hover img{
     transform: scale(1.1);
 }
 
-.about-content{
-    flex: 1;
+
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+<<<<<<< HEAD
+   
+=======
 }
+
+.image-container img {
+    width: 16%; 
+    height: auto;
+}
+
+>>>>>>> c824f54a0e5e7c4d50c39fd90618cdd3478bd281
+<<<<<<< HEAD
+.image-container img {
+    width: 16%; 
+    height: auto;
+}
+=======
 
 .about-content h2{
     font-size: 23px;
@@ -123,6 +126,9 @@ button {
 button:hover {
     background-color: #007a6b;
 }
+<<<<<<< HEAD
+>>>>>>> 114c05b98e5fd5394ee3c36c2e0c909d1f98b2af
+=======
 .nav-link:hover{
     background-color: #009879
 }
@@ -160,3 +166,4 @@ input[type="submit"]:hover {
         width: 100%;
         margin-top: 0;
     }
+>>>>>>> e8efde8fec6803533e2dd5626202a23d1e33a3ba
