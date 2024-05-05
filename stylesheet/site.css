@@ -62,6 +62,12 @@
     justify-content: space-around;
     margin-bottom: 10px;
 }
+
+.image-container img {
+    width: 16%; 
+    height: auto;
+}
+
 <<<<<<< HEAD
 .image-container img {
     width: 16%; 
