@@ -5,13 +5,13 @@
   }
   
   .image-banner img {
-    width: 100%; 
+    width: 70%; 
     height: auto; 
   }
   
   .banner-text {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the text */
     color: white; /* Make the text visible */

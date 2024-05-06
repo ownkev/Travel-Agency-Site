@@ -1,0 +1,26 @@
+.about-us {
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.directors {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.director {
+    margin: 20px;
+    width: 250px; 
+}
+
+.director img {
+    width: 100%; 
+    height: auto;
+    border-radius: 50%;
+}
