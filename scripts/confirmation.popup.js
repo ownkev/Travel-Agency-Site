@@ -1,6 +1,6 @@
-//
+
 function showConfirmation() {
-    var popup = document.getElementById("confirmationPopup"); popup.style.display = "block";
+    var popup = document.getElementById("confirm"); popup.style.display = "block";
 }
 
 function closePopup() {
