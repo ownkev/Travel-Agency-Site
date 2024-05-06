@@ -1,72 +1,10 @@
 
-
-.heading, .about-heading{
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin: 20px auto;
-}
-
-.heading h1, .about-heading h2{
-    font-size: 50px;
-    color: black;
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.heading h1::after, .about-heading h2::after{
-    content:"";
-    position: absolute;
-    width: 50%;
-    height: 4px;
-    display: block;
-    margin: 0 auto;
-    background-color: brown;
-}
-
-.heading p, .about-heading p{
-    font-size: 18px;
-    color: #605e5e;
-    margin-bottom: 35px;
-}
-
 .container{
        width: 90%;
        margin: 0 auto;
        padding: 10px 20px;
 }
 
-.about-image img{ X
-    flex: 1;
-    margin-right: 40px;
-    overflow: hidden;
-}
-
-.image-container img{
-    width: 40%;
-    height: auto;
-    display: block;
-    transition: 0.5s ease;
-}
-
-.image-container:hover img{
-    transform: scale(1.1);
-}
-
-
-.image-container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 10px;
-}
-
-.image-container img {
-    width: 240px; 
-    height: 240px;
-}
 
 <<<<<<< HEAD
 .image-container img {

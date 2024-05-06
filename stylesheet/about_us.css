@@ -3,9 +3,10 @@
     padding: 40px;
 }
 
-.container {
+.container{
     max-width: 960px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .directors {
@@ -24,3 +25,5 @@
     height: auto;
     border-radius: 50%;
 }
+
+
