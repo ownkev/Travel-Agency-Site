@@ -52,27 +52,33 @@
 <!-- Add Table with company address phone and email social handle -->
 <table>
     <tr>
-        <th>Horizon Travel Agency</th>
-        <th>888 788-8888,</th>
-        <th>20 Half way tree Road, Kingston 8</th>
+        <th>Location: </th> 
+        <td>20 Half way Tree Road, Kinsgton 8</td><br/>
+        <tr>
+        <th>Phone Number: </th> 
+        <td> 876-787-8888</td> 
+        </tr>
+        <th>Email Adress: </th>
+        <td> Travelhozion@gmail.com<td>
     </tr>
-    <tr>
-        <td>
-            <img src="images/fb-icon.png" alt="Facebook" width="32" height="32">
-            <img src="images/ig-icon.png" alt="Instagram" width="32" height="32">
-            <img src="images/wa-icon.png" alt="Whatsapp" width="32" height="32">
-        </td>
-    </tr>
+    
 </table>
 
                 <img src="images/map.jpg" style="width:100%" alt="Map">
+                <tr>
+                    <td>
+                        <img src="images/fb-icon.png" alt="Facebook" width="32" height="32">
+                        <img src="images/ig-icon.png" alt="Instagram" width="32" height="32">
+                        <img src="images/wa-icon.png" alt="Whatsapp" width="32" height="32">
+                    </td>
+                </tr>
             </div>
             <div class="container">
                 <form action="contact_us.html">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="firstname" placeholder="First name..">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <input type="text" id="lname" name="lastname" placeholder="Last name..">
                     <label for="country">Country</label>
                     <select id="country" name="country">
                         <option value="jamaica">Jamaica</option>
@@ -82,7 +88,7 @@
                         <option value="Other">Other</option>
                         
                     </select>
-                    <label for="subject">Subject</label>
+                    <label for="Message">Message</label>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
                     <input type="submit" value="Submit">
    
@@ -94,5 +100,8 @@
     <footer class="py-3 mt-4 bg-secondary" data-bs-theme="dark">
         <p class="text-center text-body-secondary">&copy;2024 Horizon Travel Services. All rights reserved.</p>
        </footer>
+       <script src="scripts/jquery.min.js"></script> 
+    <script src="scripts/bootstrap.min.js"></script> 
+    <script src="scripts/site.js"></script>
 </body>
 </html>
